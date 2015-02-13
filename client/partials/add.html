@@ -1,0 +1,28 @@
+<div class='intro deep-orange lighten-2 z-depth-1'>
+	<h1 class='white-text text-darken-5'>Add an adventure!</h1>
+	<h5 class='grey-text text-lighten-2'>Below, you can create an awesome or terrifying adventure. Make it fun, make it yours, make it awesome. <br> Didn't mean to go here? Well then friend:</h5>
+	<a href='/#/' class='waves-effect waves-light btn'>Head Back </a>
+</div>
+<div ng-controller='storyController' class='container'>
+<form class='col s12'>
+	<div class='row'>
+		<div class='input-field col s6'>
+			<label for='story_title'>Title of your story</label>	
+			<input id='story_title' type='text' ng-model='newStory.title' class='validate'>
+		</div>
+		<div class='input-field col s6'>
+			<label for='story_title'>Author <small>(this is you)</small></label>	
+			<input id='story_title' type='text' ng-model='newStory.author' class='validate'>
+		</div>
+	</div>
+	
+	<!-- <div class="row"> -->
+		<div class='center input-field center'>
+			<label for='story_content'>Write the story!</label>
+			<textarea id='story_content' ng-model='newStory.content' class='materialize-textarea'></textarea>
+		</div>
+<!-- 	</div>	 -->
+	<a href='#/start' class='btn waves-effect waves-dark' type='submit' ng-click='addStory()'>Submit <i class='mdi-content-send right'></i></a>
+</form>
+
+</div>

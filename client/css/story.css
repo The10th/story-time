@@ -1,0 +1,14 @@
+* {
+  font-family: "Avenir Next";
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.story-list {
+  text-align: center;
+  height: 150px;
+  width: 250px;
+  margin: 2%;
+  padding: 5%;
+  border: 1px solid salmon;
+}
