@@ -1,0 +1,16 @@
+<div class="intro teal">
+	<h1>welcome to  {{story.path}}</h1>
+</div>
+<div class='container'>
+	<a class='btn btn-floating orange right' href="#/story/{{story.id}}/edit"><i class='mdi-content-create'></i></a>
+	<h1 class='center'>{{story.title}}
+	<br>
+	<small>{{story.path}}</small>
+	</h1>
+	<p>{{story.content}}</p>
+	<h3>Do you wish to</h3>
+	<a class='btn blue waves-effect' href="#/story/{{story.id + 1}}">Do This</a>
+	<a class='btn red waves-effect' href="#/story/{{story.id + 2}}">Do the other thing?</a>
+	<a class='btn btn-floating red right' href="#/story"><i class='mdi-action-home'></i></a>
+</div>
+

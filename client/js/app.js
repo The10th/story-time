@@ -1,7 +1,7 @@
 //ngRoute is for $routeProvider
 //routeStyles is for individual css pages in each partial
 //ngMessages is for form validation
-var app = angular.module('myApp', ['ngRoute', 'routeStyles', 'ngMessages']);
+var app = angular.module('myApp', ['ngRoute','routeStyles', 'ngMessages']);
 
 app.config(function($routeProvider){
 
@@ -10,26 +10,38 @@ app.config(function($routeProvider){
   .when('/', {
 
     templateUrl: 'partials/index.html',
-    controller:  'StoryController',
-    css: 'css/main.css'
+    controller:  'storyController',
+    css: 'css/main.css',
+    reloadOnPath:false
+  }).when('/story', {
 
-  }).when('/add', {
-
-    templateUrl: 'partials/add.html',
+    templateUrl: 'partials/story.html',
     controller: 'storyController',
-    css: 'css/main.css'
+    css: 'css/story.css',
+    reloadOnPath:false
 
-  }).when('/start', {
+  }).when('/story/:id', {
 
-    templateUrl: 'partials/start.html',
+    templateUrl: 'partials/story-path.html',
     controller: 'storyController',
-    css: 'css/story.css'
+    css: 'css/story.css',
+    reloadOnPath:false
+
+  //route to root index
+  }).when('/story/:id/edit', {
+
+    templateUrl: 'partials/story-edit.html',
+    controller: 'storyController',
+    css: 'css/story.css',
+    reloadOnPath:false
+
   //route to root index
   }).when('/not-cool', {
 
     templateUrl: 'partials/not-cool.html',
-    controller:  'StoryController',
-    css: 'css/main.css'
+    controller:  'storyController',
+    css: 'css/main.css',
+    reloadOnPath:false
 
   }).otherwise({
     redirectTo: '/',

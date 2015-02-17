@@ -1,0 +1,20 @@
+<div class="intro blue">
+	<h1>Here you can edit the course of the adventure!</h1>
+	<h5>Simply click on the path you want to edit, and you'll be able to customize anything you want!</h5>	
+</div>
+<div class='container'>
+	<div class='row'>
+		<div class='story-list col s12 m2 l2' ng-repeat='stories in storyGroup'>
+			<a href="#/story/{{stories.id}}/edit">
+			<h5 class='center teal-text'>
+			{{stories.title}}
+			<br>
+			<small class='orange-text'>{{stories.path}}</small>
+			</h5>
+			<h6>{{stories.content | limitTo:50}}<span ng-if='stories.content.length > 50'>...</span></h6>
+			</a>
+		</div>
+	</div>
+		<h4 class='teal-text'>Done editing?</h4>
+		<a class='btn blue'href="/#/story/1">Let's get to reading!</a>
+</div>

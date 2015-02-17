@@ -1,0 +1,22 @@
+<div class="intro teal">
+	<h1>Edit <span class='red-text'>{{story.path}}</span></h1>
+</div>
+<div class='container'>
+	<form name='editStoryForm'>
+		<label for='storyTitle'>Edit the Title</label>
+		<input name='storyTitle' type='text' ng-model='story.title' value='{{story.title}}'>
+		<label for='storyContent'>Edit the content</label>
+		<textarea ng-model='story.content'  name='storyContent'>{{story.content}}</textarea>
+		<h4>Edit the paths</h4>
+		<p>All you need to put here is the path number you want to go to. Quick and easy!
+		<br>
+		<span class='grey-text'>ex. simply typing in 3 will edit the path to the 3rd path</span>	
+		</p>
+		choice 1
+		<input type='number' ng-model='story.choice1' value='{{story.choice1}}'>
+		choice 2
+		<input type='number' ng-model='story.choice2' value='{{story.choice2}}' \>
+		<button type='submit' ng-click='editPath(story)' class='btn waves-effect green'>Edit</button>
+		<a href="/#/story" class='btn red'>Go Back</a>
+	</form>
+</div>
